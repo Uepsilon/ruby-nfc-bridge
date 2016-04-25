@@ -24,7 +24,7 @@ Signal.trap("TERM") {
 while !stop_loop
   tag_info = tag_handler.wait_for_tag 
   if tag_info
-    call_url_with_uid(tag_info.to_s) unless tag_info.to_s
+    call_url_with_uid(tag_info.to_s) if tag_info.to_s
   end
 end
 

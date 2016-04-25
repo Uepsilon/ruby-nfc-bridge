@@ -14,11 +14,13 @@ class TagHandler
   end
 
   def wait_for_tag(wait_timeout = 1)
+    tag_info = nil
+
     Timeout::timeout(wait_timeout) do 
-      tag_info = dev.select
+      tag_info = @reader.select
     end
 
-    handle_new_tag tag_info
+    handle_new_tag tag_info if tag_info
   rescue Timeout::Error
     false
   end
