@@ -1,11 +1,16 @@
 GEM
+  remote: https://rubygems.org/
   specs:
+    foreman (0.80.2)
+      thor (~> 0.19.1)
     nfc (3.1.1)
+    thor (0.19.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  foreman
   nfc
 
 BUNDLED WITH
