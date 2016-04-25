@@ -1,1 +1,1 @@
-ruby-nfc-bridge: ruby ./nfc_bridge
+ruby-nfc-bridge: bundle exec ruby nfc_bridge.rb
