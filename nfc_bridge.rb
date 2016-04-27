@@ -1,4 +1,4 @@
-Dir["./lib/*.rb"].each { |file| require file }
+Dir['./lib/*.rb'].each { |file| require file }
 
 def call_url_with_uid(tag_uid)
   url = "http://cowokatra.apps.railslabs.com/cards/#{tag_uid.to_s}"
@@ -28,7 +28,7 @@ loop do
 
     @logger.error "Reader gone, waiting #{seconds} seconds"
     sleep seconds
-    @logger.error "Retry"
+    @logger.error 'Retry'
     next
   end
 end
